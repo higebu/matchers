@@ -6,7 +6,7 @@ package example
 
 import (
 	gomock "github.com/golang/mock/gomock"
-	testpb "github.com/higebu/matchers/internal/testpb"
+	testpb "github.com/higebu/matchers/testpb"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
 	reflect "reflect"
 )
@@ -36,6 +36,7 @@ func (m *MockFoo) EXPECT() *MockFooMockRecorder {
 
 // Bar mocks base method
 func (m *MockFoo) Bar(x []A) error {
+	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Bar", x)
 	ret0, _ := ret[0].(error)
 	return ret0
@@ -43,11 +44,13 @@ func (m *MockFoo) Bar(x []A) error {
 
 // Bar indicates an expected call of Bar
 func (mr *MockFooMockRecorder) Bar(x interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Bar", reflect.TypeOf((*MockFoo)(nil).Bar), x)
 }
 
 // Baz mocks base method
 func (m *MockFoo) Baz(msg *testpb.Message) error {
+	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Baz", msg)
 	ret0, _ := ret[0].(error)
 	return ret0
@@ -55,11 +58,13 @@ func (m *MockFoo) Baz(msg *testpb.Message) error {
 
 // Baz indicates an expected call of Baz
 func (mr *MockFooMockRecorder) Baz(msg interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Baz", reflect.TypeOf((*MockFoo)(nil).Baz), msg)
 }
 
 // Qux mocks base method
 func (m *MockFoo) Qux(t *timestamppb.Timestamp) error {
+	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Qux", t)
 	ret0, _ := ret[0].(error)
 	return ret0
@@ -67,5 +72,6 @@ func (m *MockFoo) Qux(t *timestamppb.Timestamp) error {
 
 // Qux indicates an expected call of Qux
 func (mr *MockFooMockRecorder) Qux(t interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Qux", reflect.TypeOf((*MockFoo)(nil).Qux), t)
 }

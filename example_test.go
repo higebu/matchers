@@ -7,8 +7,8 @@ import (
 	"github.com/golang/protobuf/ptypes"
 
 	"github.com/higebu/matchers"
-	"github.com/higebu/matchers/internal/example"
-	"github.com/higebu/matchers/internal/testpb"
+	"github.com/higebu/matchers/example"
+	"github.com/higebu/matchers/testpb"
 )
 
 func ExampleCmpEq() {

@@ -7,7 +7,7 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/golang/protobuf/ptypes"
 	"github.com/higebu/matchers"
-	"github.com/higebu/matchers/internal/testpb"
+	"github.com/higebu/matchers/testpb"
 )
 
 func TestMatchers(t *testing.T) {
