@@ -4,3 +4,7 @@
 [![codecov](https://codecov.io/gh/higebu/matchers/branch/main/graph/badge.svg?token=BjCNXyokWM)](https://codecov.io/gh/higebu/matchers)
 
 Matchers for [gomock](https://pkg.go.dev/github.com/golang/mock/gomock)
+
+# Usage
+
+See [examples](https://pkg.go.dev/github.com/higebu/matchers#pkg-examples)
